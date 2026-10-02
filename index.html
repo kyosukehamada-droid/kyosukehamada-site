@@ -148,6 +148,21 @@
     background: #fff; transform: scale(1.06);
   }
   .video-frame.is-playing .video-play-btn { display: none; }
+
+  .video-end-overlay { position: absolute; inset: 0; z-index: 2; }
+  .video-end-overlay[hidden] { display: none; }
+  .video-end-poster { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .video-replay-btn {
+    position: absolute; inset: 0; width: 100%; height: 100%;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;
+    background: rgba(20,22,26,0.45);
+    border: none; cursor: pointer; color: #fff;
+    font-family: "Noto Sans JP", sans-serif; font-size: 13px; letter-spacing: 0.06em;
+  }
+  .video-replay-btn .video-play-icon { font-size: 22px; line-height: 1; }
+  .video-replay-btn:hover .video-play-icon, .video-replay-btn:focus-visible .video-play-icon {
+    background: #fff; transform: scale(1.06);
+  }
   @media (prefers-reduced-motion: reduce) { .video-play-icon { transition: none; } }
 
   /* ---- support summary ---- */
@@ -456,6 +471,13 @@
         <span class="video-play-icon" aria-hidden="true">▶</span>
         <span>動画を見る｜20秒</span>
       </button>
+      <div class="video-end-overlay" hidden>
+        <img class="video-end-poster" src="media/kyosuke-hamada-brand-poster.jpg" alt="" aria-hidden="true">
+        <button type="button" class="video-replay-btn" aria-label="もう一度動画を見る（20秒）">
+          <span class="video-play-icon" aria-hidden="true">↻</span>
+          <span>もう一度見る</span>
+        </button>
+      </div>
     </div>
   </section>
 
@@ -1121,22 +1143,44 @@ window.trackEvent = window.trackEvent || function (name, params) {
 })();
 
 (function () {
-  // brand video: manual play (no autoplay/loop) + start / 50% / complete tracking
+  // brand video: manual play (no autoplay/loop) + start / 50% / complete tracking.
+  // "50% reached" is defined as currentTime / duration >= 0.5 on timeupdate,
+  // so it also fires if the viewer seeks past the midpoint rather than watching
+  // through it -- seeking counts toward progress_50 under this definition.
   var frame = document.querySelector('.video-frame');
   var video = document.getElementById('brand-video');
   var playBtn = document.querySelector('.video-play-btn');
-  if (!frame || !video || !playBtn) return;
+  var endOverlay = document.querySelector('.video-end-overlay');
+  var replayBtn = document.querySelector('.video-replay-btn');
+  if (!frame || !video || !playBtn || !endOverlay || !replayBtn) return;
 
   var startedTracked = false;
   var halfTracked = false;
   var completeTracked = false;
 
+  function resetPlaySession() {
+    startedTracked = false;
+    halfTracked = false;
+    completeTracked = false;
+  }
+
   playBtn.addEventListener('click', function () {
     frame.classList.add('is-playing');
-    video.muted = false;
+    video.muted = false; // first viewing: start with sound on
     video.play().catch(function () {
       // if the browser blocks it, reveal native controls so the viewer can start it themselves
       frame.classList.remove('is-playing');
+    });
+  });
+
+  replayBtn.addEventListener('click', function () {
+    endOverlay.hidden = true;
+    resetPlaySession(); // a replay is tracked as a new playback session
+    video.currentTime = 0;
+    // volume/mute are intentionally left untouched here: if the viewer muted
+    // or changed volume during the first viewing, the replay keeps that setting.
+    video.play().catch(function () {
+      endOverlay.hidden = false;
     });
   });
 
@@ -1157,11 +1201,14 @@ window.trackEvent = window.trackEvent || function (name, params) {
   });
 
   video.addEventListener('ended', function () {
+    endOverlay.hidden = false; // show the still photo + "watch again", not the black last frame
     if (!completeTracked) {
       completeTracked = true;
       window.trackEvent('video_complete', { video_name: 'kyosuke_hamada_brand_20s' });
     }
   });
+  // A genuine mid-video pause is intentionally not handled here: it never
+  // reveals the end overlay and never sends a tracking event -- only 'ended' does.
 })();
 
 (function () {
