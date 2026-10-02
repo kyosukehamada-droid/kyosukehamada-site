@@ -95,7 +95,8 @@
   .nav-toggle span { display: block; width: 100%; height: 1.5px; background: var(--ink); }
 
   @media (max-width: 640px) {
-    nav .wrap { position: relative; }
+    nav .wrap { position: relative; padding-left: 16px; padding-right: 16px; }
+    .brand { font-size: 14px; flex-shrink: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
     .nav-toggle { display: flex; }
     .navlinks {
       position: absolute; top: 62px; left: 0; right: 0;
@@ -411,7 +412,7 @@
     <div class="hero-grid">
       <div>
         <div class="eyebrow">TERASS所属 不動産エージェント</div>
-        <h1 class="headline"><span class="nowrap">「家を買う」</span>を、一生の<span class="nowrap">「資産形成」</span>の第一歩に。</h1>
+        <h1 class="headline"><span class="nowrap">「家を買う」</span>を、<span class="nowrap">一生</span>の<span class="nowrap">「資産形成」</span>の<span class="nowrap">第一歩</span>に。</h1>
         <p class="lede">
           買う・売るで終わりじゃなく、そこから一緒に考えていきたいんですよね。
           宅建士としてだけでなく、FPの視点も持って、長く並走します。
