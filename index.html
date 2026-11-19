@@ -6,8 +6,35 @@
      like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=cb796fca-4e64-416f-8ec0-062baf996cbf
      Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>不動産エージェント　浜田恭輔</title>
-<meta name="description" content="不動産エージェント浜田恭輔のプロフィールサイト。データに基づいた不動産の購入・売却・投資のご相談。">
+<title>不動産エージェント　浜田恭輔｜TERASS所属</title>
+<meta name="description" content="TERASS所属の不動産エージェント浜田恭輔のプロフィールサイト。宅建士・FPの視点で、データに基づいた不動産の購入・売却・投資のご相談をお受けしています。">
+<link rel="canonical" href="https://kyosukehamada.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="不動産エージェント　浜田恭輔">
+<meta property="og:title" content="不動産エージェント　浜田恭輔｜TERASS所属">
+<meta property="og:description" content="「家を買う」を、一生の「資産形成」の第一歩に。宅建士・FPの視点で、購入・売却・投資のご相談をお受けしています。">
+<meta property="og:url" content="https://kyosukehamada.com/">
+<meta property="og:image" content="https://kyosukehamada.com/media/kyosuke-hamada-brand-poster.jpg">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  "name": "浜田恭輔",
+  "url": "https://kyosukehamada.com/",
+  "image": "https://kyosukehamada.com/media/kyosuke-hamada-brand-poster.jpg",
+  "description": "TERASS所属の不動産エージェント。宅地建物取引士・2級FP技能士・住宅ローンアドバイザー。",
+  "email": "kyosuke.hamada@terass.com",
+  "areaServed": "首都圏",
+  "parentOrganization": { "@type": "Organization", "name": "株式会社TERASS" },
+  "sameAs": [
+    "https://www.instagram.com/fudosan_agent_hamada",
+    "https://x.com/HamadaKyos78984",
+    "https://note.com/lithe_azalea8686"
+  ]
+}
+</script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏠</text></svg>">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
@@ -218,6 +245,9 @@
   .stat-delta { font-size: 12px; margin-top: 4px; font-variant-numeric: tabular-nums; color: var(--ink-soft); }
   .stat-delta.up { color: var(--ink); }
   .stat-delta.down { color: var(--ink-soft); }
+  .data-strip-link { font-size: 12.5px; color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line-strong); }
+  .data-strip-link:hover { border-color: var(--ink); }
+  .data-strip-note { margin: 14px 0 0; font-size: 12px; color: var(--ink-soft); line-height: 1.7; }
 
   /* ---- insight (resale-value criteria) ---- */
   .insight { padding: 64px 0; }
@@ -238,6 +268,7 @@
   @media (max-width: 720px) { .service-list { grid-template-columns: 1fr; } }
   .service-card { background: var(--paper); padding: 30px; display: flex; flex-direction: column; }
   .service-card.wide { grid-column: 1 / -1; }
+  .service-card .services-link { align-self: flex-start; }
   .service-icon { width: 34px; height: 34px; margin-bottom: 18px; }
   .service-icon svg { width: 100%; height: 100%; }
   .service-name { font-size: 17px; margin-bottom: 4px; }
@@ -269,6 +300,10 @@
   .section-head { display: flex; align-items: baseline; gap: 16px; margin-bottom: 34px; }
   .section-num { font-family: "Noto Sans JP", sans-serif; font-weight: 700; font-size: 13px; color: var(--ink); letter-spacing: 0.08em; }
   .section-title { font-size: 24px; }
+  @media (max-width: 640px) {
+    .section-head { flex-direction: column; gap: 6px; margin-bottom: 26px; }
+    .faq-table { font-size: 12.5px; }
+  }
   .promise-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
   @media (max-width: 760px) { .promise-list { grid-template-columns: 1fr; } }
   .promise { background: var(--paper); padding: 30px 26px; }
@@ -514,30 +549,32 @@
   <section class="data-strip">
     <div class="wrap">
       <div class="data-strip-head">
-        <span class="data-strip-label">首都圏｜中古マンション市況（2026年8月時点）</span>
+        <span class="data-strip-label">首都圏｜中古マンション市況（2026年10月時点）</span>
+        <a class="data-strip-link" href="https://reins-market-watch.vercel.app/" target="_blank" rel="noopener" data-track-event="market_dashboard_click" data-track-location="data_strip">エリア別の推移を見る →</a>
       </div>
       <div class="stat-row">
         <div class="stat-tile">
           <div class="stat-label">成約件数</div>
-          <div class="stat-value">3,180件</div>
-          <div class="stat-delta down">▼ 10.5% 前年比</div>
+          <div class="stat-value">3,392件</div>
+          <div class="stat-delta down">▼ 19.7% 前年比</div>
         </div>
         <div class="stat-tile">
           <div class="stat-label">成約㎡単価</div>
-          <div class="stat-value">81.60万円</div>
-          <div class="stat-delta down">▼ 3.8% 前年比</div>
+          <div class="stat-value">79.44万円</div>
+          <div class="stat-delta down">▼ 6.9% 前年比</div>
         </div>
         <div class="stat-tile">
           <div class="stat-label">新規登録件数</div>
-          <div class="stat-value">15,627件</div>
-          <div class="stat-delta up">▲ 9.7% 前年比</div>
+          <div class="stat-value">20,072件</div>
+          <div class="stat-delta up">▲ 25.8% 前年比</div>
         </div>
         <div class="stat-tile">
           <div class="stat-label">在庫件数</div>
-          <div class="stat-value">48,235件</div>
-          <div class="stat-delta up">▲ 8.2% 前年比</div>
+          <div class="stat-value">53,510件</div>
+          <div class="stat-delta up">▲ 22.5% 前年比</div>
         </div>
       </div>
+      <p class="data-strip-note">成約が前年より減る一方で、売り出し（新規登録）と在庫が2割以上増えています。買い手が比較・交渉しやすく、売り手は価格設定がより重要になる局面です。<br>出典：東日本不動産流通機構（レインズ）のデータを独自に集計。2025年1月以降はレインズのシステム改修により、前年比が大きく動く場合があります。</p>
     </div>
   </section>
 
@@ -748,15 +785,45 @@
         <details class="service-sample">
           <summary>サンプル出力を見る</summary>
           <div class="sample-output">
-            <span class="sample-tag">現在の数値（2026年8月時点）</span>
-            <div class="sample-row"><span class="k">成約件数（首都圏）</span><span class="v">3,180件</span></div>
-            <div class="sample-row"><span class="k">成約㎡単価</span><span class="v">81.60万円</span></div>
-            <div class="sample-row"><span class="k">在庫件数</span><span class="v">48,235件</span></div>
+            <span class="sample-tag">現在の数値（2026年10月時点）</span>
+            <div class="sample-row"><span class="k">成約件数（首都圏）</span><span class="v">3,392件</span></div>
+            <div class="sample-row"><span class="k">成約㎡単価</span><span class="v">79.44万円</span></div>
+            <div class="sample-row"><span class="k">在庫件数</span><span class="v">53,510件</span></div>
+            <div class="sample-row"><span class="k">成約件数の前年比（東京都）</span><span class="v">−25.2%</span></div>
+          </div>
+          <a class="services-link" href="https://reins-market-watch.vercel.app/" target="_blank" rel="noopener" data-track-event="market_dashboard_click" data-track-location="services">ダッシュボードを開く →</a>
+        </details>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 40 40" fill="none" stroke="var(--ink)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="7" y="4" width="26" height="32" rx="1"/>
+            <path d="M12 11h16M12 16h16"/>
+            <path d="M12 23h7M12 28h7"/>
+            <path d="M24 30l3-7 3 7M25 28h4"/>
+          </svg>
+        </div>
+        <h3 class="service-name">資金計画書</h3>
+        <p class="service-desc">購入時の諸費用から住宅ローンの返済、住宅ローン控除まで。「結局いくら必要で、毎月いくら払うのか」を1冊にまとめます。</p>
+        <ul class="service-points">
+          <li>登録免許税・不動産取得税・印紙税を評価額や契約日から計算</li>
+          <li>金利上昇シナリオ（5年ルール・125%ルール）での返済額を確認</li>
+          <li>2026年改正後の住宅ローン控除で、実際に戻る税額を試算</li>
+          <li>年収から見た借入可能額と、繰上返済の効果も比較</li>
+        </ul>
+        <details class="service-sample">
+          <summary>サンプル出力を見る</summary>
+          <div class="sample-output">
+            <span class="sample-tag">試算イメージ（物件6,000万円・全額借入・35年・変動0.9%）</span>
+            <div class="sample-row"><span class="k">購入時の諸費用</span><span class="v">約422万円</span></div>
+            <div class="sample-row"><span class="k">毎月の返済額</span><span class="v">166,590円</span></div>
+            <div class="sample-row"><span class="k">金利が1%上がった場合</span><span class="v">195,692円</span></div>
           </div>
         </details>
       </div>
 
-      <div class="service-card wide">
+      <div class="service-card">
         <div class="service-icon">
           <svg viewBox="0 0 40 40" fill="none" stroke="var(--ink)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
             <rect x="4" y="6" width="32" height="6" rx="1"/>
@@ -767,9 +834,10 @@
         <h3 class="service-name">プレミアム売却査定書</h3>
         <p class="service-desc">「売ったら、いくら手元に残るか」を1件ごとにまとめる査定書です。ローン残債の精算から、譲渡所得税の計算根拠、税引後の最終手残り額まで確認できます。</p>
         <ul class="service-points">
-          <li>取得費の算定方法や特別控除（3,000万円控除等）を踏まえて試算</li>
-          <li>所有期間（短期・長期）による税率区分を自動判定</li>
-          <li>ローン残債の精算を含めた、税引後の最終手残り額を算出</li>
+          <li>建物の減価償却を反映した取得費と、特別控除（3,000万円控除等）を踏まえて試算</li>
+          <li>所有期間（短期・長期・10年超の軽減税率）を自動判定。共有名義は持分ごとに計算</li>
+          <li>固都税・管理費の日割精算とローン残債の精算を含めた、税引後の最終手残り額を算出</li>
+          <li>成約価格を上下させた場合の手残りも一覧で比較</li>
         </ul>
         <details class="service-sample">
           <summary>サンプル出力を見る</summary>
@@ -816,7 +884,7 @@
       <div>
         <div class="bio-copy">
           <p>
-            不動産業界に入って15年目になります。<strong>ただ物件を仲介するだけじゃなくて、「不動産を使ったライフデザイン」まで一緒に考える人</strong>でいたくて、この仕事をしています。
+            不動産業界に入って16年目になります。<strong>ただ物件を仲介するだけじゃなくて、「不動産を使ったライフデザイン」まで一緒に考える人</strong>でいたくて、この仕事をしています。
           </p>
           <p>
             不動産は人生でいちばん高い買い物だったりします。だからこそ、何を買うか以上に、誰と組むかが大事なんですよね。港区・渋谷区・中央区を中心に、収益不動産やリノベーション、税務・節税まわりのご相談を多く受けています。
@@ -942,7 +1010,7 @@
           <h3 class="case-sub">事例：20代後半・投資初心者の単身／DINKSのお客様</h3>
           <div class="case-body">
             <p>「貯金だけでは不安だけど、投資マンションをいきなり買うのは怖い」というお客様。私はまず、ご自身が住む家を「実需兼、将来の収益物件（ヤドカリ投資）」にする戦略をご提案しました。</p>
-            <p>業界歴15年の経験から、周辺相場や賃料査定の裏側までお伝えし、出口戦略を徹底的にシミュレーション。結果として、「住みながら資産を築く」という納得感を持って一歩を踏み出していただけました。</p>
+            <p>業界歴15年以上の経験から、周辺相場や賃料査定の裏側までお伝えし、出口戦略を徹底的にシミュレーション。結果として、「住みながら資産を築く」という納得感を持って一歩を踏み出していただけました。</p>
             <p>初心者の方こそ、目先の損得ではなく「10年、20年後にプラスになる選び方」を、私の失敗談（笑）も含めて包み隠さずお伝えしています。</p>
           </div>
         </div>
@@ -988,16 +1056,19 @@
           <tr><th>エリア</th><th>時期</th><th style="text-align:right">成約価格</th></tr>
         </thead>
         <tbody>
+          <tr><td class="area">大田区<span class="kind">新築戸建</span></td><td class="date">2026年10月</td><td class="amt">1億4,900万円</td></tr>
+          <tr><td class="area">中央区<span class="kind">居住用マンション</span></td><td class="date">2026年07月</td><td class="amt">8,800万円</td></tr>
+          <tr><td class="area">目黒区<span class="kind">居住用マンション</span></td><td class="date">2026年06月</td><td class="amt">1億4,800万円</td></tr>
           <tr><td class="area">北区西ヶ原<span class="kind">居住用マンション</span></td><td class="date">2026年02月</td><td class="amt">1億3,000万円</td></tr>
           <tr><td class="area">大田区六郷<span class="kind">一棟収益アパート</span></td><td class="date">2025年09月</td><td class="amt">1億9,400万円</td></tr>
           <tr><td class="area">北区赤羽<span class="kind">居住用マンション</span></td><td class="date">2025年08月</td><td class="amt">7,980万円</td></tr>
-          <tr><td class="area">中央区勝どき<span class="kind">居住用マンション</span></td><td class="date">2025年06月</td><td class="amt">1億7,980万円</td></tr>
-          <tr><td class="area">品川区西大井<span class="kind">居住用マンション</span></td><td class="date">2025年06月</td><td class="amt">1億5,500万円</td></tr>
-          <tr><td class="area">台東区浅草<span class="kind">居住用マンション</span></td><td class="date">2025年03月</td><td class="amt">5,980万円</td></tr>
-          <tr><td class="area">荒川区三ノ輪<span class="kind">居住用マンション</span></td><td class="date">2025年02月</td><td class="amt">6,680万円</td></tr>
-          <tr><td class="area">品川区西五反田<span class="kind">居住用マンション</span></td><td class="date">2025年04月</td><td class="amt">4,980万円</td></tr>
           <tr><td class="area">千葉県船橋市<span class="kind">居住用マンション</span></td><td class="date">2025年07月</td><td class="amt">5,500万円</td></tr>
           <tr><td class="area">神奈川県川崎市高津区<span class="kind">収益用マンション</span></td><td class="date">2025年07月</td><td class="amt">2,000万円</td></tr>
+          <tr><td class="area">中央区勝どき<span class="kind">居住用マンション</span></td><td class="date">2025年06月</td><td class="amt">1億7,980万円</td></tr>
+          <tr><td class="area">品川区西大井<span class="kind">居住用マンション</span></td><td class="date">2025年06月</td><td class="amt">1億5,500万円</td></tr>
+          <tr><td class="area">品川区西五反田<span class="kind">居住用マンション</span></td><td class="date">2025年04月</td><td class="amt">4,980万円</td></tr>
+          <tr><td class="area">台東区浅草<span class="kind">居住用マンション</span></td><td class="date">2025年03月</td><td class="amt">5,980万円</td></tr>
+          <tr><td class="area">荒川区三ノ輪<span class="kind">居住用マンション</span></td><td class="date">2025年02月</td><td class="amt">6,680万円</td></tr>
           <tr><td class="area">埼玉県朝霞市<span class="kind">収益用アパート</span></td><td class="date">2024年11月</td><td class="amt">8,200万円</td></tr>
           <tr><td class="area">大田区長原<span class="kind">収益用マンション</span></td><td class="date">2024年10月</td><td class="amt">3,100万円</td></tr>
           <tr><td class="area">世田谷区駒沢<span class="kind">収益用マンション</span></td><td class="date">2024年10月</td><td class="amt">3,000万円</td></tr>
@@ -1021,15 +1092,27 @@
       <details class="faq-item">
         <summary>住宅ローン控除って、結局どんな制度ですか？</summary>
         <div class="faq-body">
-          <p>住宅ローンを使って家を買うと、要件を満たせば所得税・住民税が一定期間安くなる制度です。控除を受けられる期間は新築で最長13年、中古で最低10年。年間の控除額は「年末のローン残高×0.7%」と「所得税の上限額（新築35万円、中古21万円が目安）」のうち、低い方が基準になります。</p>
-          <p>主な適用条件（基礎条件・抜粋）</p>
+          <p>住宅ローンを使って家を買うと、要件を満たせば所得税・住民税が一定期間安くなる制度です。年間の控除額は「年末のローン残高×0.7%」ですが、対象になる残高には住宅の省エネ性能に応じた上限があります。2026年の税制改正で、2030年までの入居が対象になりました。</p>
+          <table class="faq-table">
+            <thead><tr><th>2026〜2027年入居</th><th>残高の上限（子育て世帯等）</th><th>控除期間</th></tr></thead>
+            <tbody>
+              <tr><td>新築・認定住宅</td><td>4,500万円（5,000万円）</td><td>13年</td></tr>
+              <tr><td>新築・ZEH水準</td><td>3,500万円（4,500万円）</td><td>13年</td></tr>
+              <tr><td>新築・省エネ基準適合</td><td>2,000万円（3,000万円）</td><td>13年</td></tr>
+              <tr><td>中古・認定住宅／ZEH水準</td><td>3,500万円（4,500万円）</td><td>13年</td></tr>
+              <tr><td>中古・省エネ基準適合</td><td>2,000万円（3,000万円）</td><td>13年</td></tr>
+              <tr><td>中古・その他の住宅</td><td>2,000万円</td><td>10年</td></tr>
+            </tbody>
+          </table>
+          <p>中古でも省エネ性能の高い住宅は13年・上限も引き上げとなり、「新築か中古か」より「性能」で差がつく制度になっています。省エネ基準を満たさない新築は原則対象外で、新築の省エネ基準適合住宅も2028年以降の入居は対象外になります。</p>
+          <p>主な適用条件（抜粋）</p>
           <ul>
             <li>引き渡しから6ヶ月以内に入居すること</li>
             <li>その年の合計所得金額が2,000万円以下であること</li>
-            <li>床面積が50㎡以上で、半分以上が自分の居住用であること</li>
+            <li>床面積が50㎡以上（合計所得1,000万円以下なら40㎡以上。この場合は子育て世帯等の上乗せなし）</li>
             <li>10年以上のローンを組んでいること</li>
           </ul>
-          <p class="faq-note">要件は毎年見直されます。実際に適用できるかは、面談のときに一緒に確認しましょう。</p>
+          <p class="faq-note">実際に戻る税額は、年収や控除しきれない額によって変わります。資金計画書で、お客様ごとの控除額を年ごとに試算します。出典：国土交通省「住宅ローン減税」</p>
         </div>
       </details>
 
@@ -1048,7 +1131,7 @@
           </table>
           <p>フラット35は少し基準が違い、年収400万円未満は30%以下、400万円以上は35%以下です。</p>
           <p>また審査には、実際の借入金利より高め（目安3〜4%）の「審査金利」が使われます。これは金利が上がっても返済が滞らないようにするための安全マージンです。フラット35は実際の借入金利がそのまま審査に使われるため、結果的に借入可能額を増やせるケースがあります。</p>
-          <p>例えば年収500万円・返済負担率35%の場合、年間返済額の上限は175万円。これは適用金利0.5%なら約5,610万円、審査金利3.0%なら約3,780万円の借入可能額に相当します（他の借入がない場合）。</p>
+          <p>例えば年収500万円・返済負担率35%の場合、年間返済額の上限は175万円。これは適用金利1.0%なら約5,160万円、審査金利3.0%なら約3,780万円の借入可能額に相当します（他の借入がない場合）。</p>
         </div>
       </details>
     </div>
@@ -1104,7 +1187,7 @@
     </ul>
   </div>
   <div class="wrap">
-    <span>浜田恭輔 ／ TERASS所属 不動産エージェント</span>
+    <span>© 2026 浜田恭輔 ／ TERASS所属 不動産エージェント</span>
     <span>株式会社TERASS ／ 国土交通大臣免許(1)第010125号</span>
   </div>
 </footer>
