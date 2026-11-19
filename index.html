@@ -245,8 +245,6 @@
   .stat-delta { font-size: 12px; margin-top: 4px; font-variant-numeric: tabular-nums; color: var(--ink-soft); }
   .stat-delta.up { color: var(--ink); }
   .stat-delta.down { color: var(--ink-soft); }
-  .data-strip-link { font-size: 12.5px; color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line-strong); }
-  .data-strip-link:hover { border-color: var(--ink); }
   .data-strip-note { margin: 14px 0 0; font-size: 12px; color: var(--ink-soft); line-height: 1.7; }
 
   /* ---- insight (resale-value criteria) ---- */
@@ -268,7 +266,6 @@
   @media (max-width: 720px) { .service-list { grid-template-columns: 1fr; } }
   .service-card { background: var(--paper); padding: 30px; display: flex; flex-direction: column; }
   .service-card.wide { grid-column: 1 / -1; }
-  .service-card .services-link { align-self: flex-start; }
   .service-icon { width: 34px; height: 34px; margin-bottom: 18px; }
   .service-icon svg { width: 100%; height: 100%; }
   .service-name { font-size: 17px; margin-bottom: 4px; }
@@ -550,7 +547,6 @@
     <div class="wrap">
       <div class="data-strip-head">
         <span class="data-strip-label">首都圏｜中古マンション市況（2026年10月時点）</span>
-        <a class="data-strip-link" href="https://reins-market-watch.vercel.app/" target="_blank" rel="noopener" data-track-event="market_dashboard_click" data-track-location="data_strip">エリア別の推移を見る →</a>
       </div>
       <div class="stat-row">
         <div class="stat-tile">
@@ -777,7 +773,7 @@
           </svg>
         </div>
         <h3 class="service-name">マーケットインサイト</h3>
-        <p class="service-desc">首都圏の中古マンション市場を、エリア別・価格帯別にいつでも見られるダッシュボード。ご相談の前に、まず市況を掴んでいただけます。</p>
+        <p class="service-desc">首都圏の中古マンション市場を、エリア別・価格帯別に分析する独自のダッシュボード。ご相談の際に、検討エリアの市況を一緒に確認します。</p>
         <ul class="service-points">
           <li>成約件数・在庫・㎡単価の推移をエリア別に確認</li>
           <li>前年比のヒートマップで市場の温度感が一目でわかる</li>
@@ -791,7 +787,6 @@
             <div class="sample-row"><span class="k">在庫件数</span><span class="v">53,510件</span></div>
             <div class="sample-row"><span class="k">成約件数の前年比（東京都）</span><span class="v">−25.2%</span></div>
           </div>
-          <a class="services-link" href="https://reins-market-watch.vercel.app/" target="_blank" rel="noopener" data-track-event="market_dashboard_click" data-track-location="services">ダッシュボードを開く →</a>
         </details>
       </div>
 
